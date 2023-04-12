@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Saat ve Karşılama senacnk</title>
-
     <!--------------------- STYLE START --------------------->
     <style>
         *{margin: 0;padding: 0;}
@@ -19,6 +18,7 @@
         .timeboxclass.month {font-family: Orbitron; padding: 5px;}
         .desc{font-size:25px; margin: 10px 0;}
     </style>
+     
        <!--------------------- STYLE END --------------------->
 </head>
 <body>
@@ -29,45 +29,6 @@
     <span class="month"></span>
 </div>
 <p class="desc">Tarihinde <b>Kodluyoruz Frontend Web Development Patikası'nın Javascript bölümü 1. ödevdesiniz. </b></p>
-
-
-
+<script src="digital-clock.js"></script>
 </body>
-    <!--------------------- JS START --------------------->
-    <!-- pm = öğleden sonra
-    am = öğleden önce  -->
-<script>
-    let textbox = prompt("adınız nedir");
-    let spanName = document.querySelector(".name");
-    textboxName = document.createTextNode(textbox);
-    spanName.appendChild(textboxName);
-    
-    function time()
-    {
-        const date = new Date();
-        h= date.getHours();
-        m= date.getMinutes();
-        s= date.getSeconds();
-        type = "am";
-
-        let mth = new Date();
-        let monthList = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
-        let presentMonth = monthList[mth.getMonth()];
-        document.querySelector(".month").innerHTML = presentMonth;
-
-        if(h > 12){type="pm"}
-        if(h > 12){h=h-12}
-        if(m<10){m="0"+m}
-        if(s<10){s="0"+s}
-
-        fullTime = h +" : "+ m +" : "+s+" : "+type;
-        document.getElementById("timeBox").innerText = fullTime;
-
-     
-
-        setTimeout(time, 1000);
-    }
-    time();
-</script>
-<!--------------------- JS END --------------------->
 </html>
