@@ -1,1 +1,2 @@
-# patika-js
+# Javascript Saat ve Karşılama
+![](digital.clock.png)
