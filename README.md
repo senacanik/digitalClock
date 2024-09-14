@@ -1,2 +1,2 @@
-# Javascript Saat ve Karşılama
+# Javascript Clock and Welcome
 ![](digital.clock.png)
