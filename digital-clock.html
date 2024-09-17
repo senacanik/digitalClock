@@ -5,30 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Saat ve Karşılama senacnk</title>
-    <!--------------------- STYLE START --------------------->
+    <!-- Style start --------------------->
     <style>
         *{margin: 0;padding: 0;}
-        body
-        {
-            display: flex;justify-content: center;
-            align-items: center; flex-direction: column;height: 100vh; width: 100%;color:#d08938;
-            font-size: 25px; background-color: #33383e;
-        }
+        body{display: flex;justify-content: center;align-items: center;flex-direction: column;height: 100vh;width: 100%;color:#000;font-size: 25px;background-color: #fff;font-family: sans-serif;}
         .wrapper{display: flex; justify-content:center; align-items: center; gap: 10px;}
         .timeboxclass.month {font-family: Orbitron; padding: 5px;}
-        .desc{font-size:25px; margin: 10px 0;}
+        .desc{font-size:25px;margin: 10px 0 30px 0;display: flex;justify-content: center;align-items: center;gap: 15px;}
+        .timeboxclass{border: 1px solid #797979;border-radius: 5px;padding: 5px 15px;box-shadow: 4px -3px 0px 0px #797979;}
     </style>
      
-       <!--------------------- STYLE END --------------------->
+    <!-- Style end --------------------->
 </head>
 <body>
-<h1>KODLUYORUZ</h1>
-<p class="desc">Merhaba, <span class="name"></span>! Hoşgeldin!</p>
+<p class="desc">Hello,<span class="name"></span> welcome!</p>
 <div class="wrapper">
+    <span>Today = </span>
     <p id="timeBox" class="timeboxclass" onload="time()"></p>
     <span class="month"></span>
 </div>
-<p class="desc">Tarihinde <b>Kodluyoruz Frontend Web Development Patikası'nın Javascript bölümü 1. ödevdesiniz. </b></p>
 <script src="digital-clock.js"></script>
 </body>
 </html>

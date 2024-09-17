@@ -1,8 +1,17 @@
-    let textbox = prompt("adınız nedir");
-    let spanName = document.querySelector(".name");
-    textboxName = document.createTextNode(textbox);
-    spanName.appendChild(textboxName);
-    
+let textbox = prompt("What is your name?");
+let spanName = document.querySelector(".name");
+    if(spanName){
+        if(textbox === null || textbox.trim() === ""){
+            textbox="unkown person"
+        }
+        let textboxName = document.createTextNode(textbox);
+        spanName.appendChild(textboxName);
+
+    }
+    else{
+        textbox = prompt("What is your name?");
+    }
+
     function time()
     {
         const date = new Date();
@@ -12,7 +21,7 @@
         type = "am";
 
         let mth = new Date();
-        let monthList = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+        let monthList = ["january","Febuary","March","April","May","June","July","August","September","October","November","December"];
         let presentMonth = monthList[mth.getMonth()];
         document.querySelector(".month").innerHTML = presentMonth;
 
@@ -24,5 +33,6 @@
         fullTime = h +" : "+ m +" : "+s+" : "+type;
         document.getElementById("timeBox").innerText = fullTime;
         setTimeout(time, 1000);
+        
     }
     time();
